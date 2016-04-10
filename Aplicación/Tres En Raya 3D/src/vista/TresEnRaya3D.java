@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tres.en.raya.pkg3d;
+package vista;
 
 import tres.en.raya.pkg3d.vista.TableroDelJuego;
 
