@@ -5,8 +5,6 @@
  */
 package vista;
 
-import tres.en.raya.pkg3d.vista.TableroDelJuego;
-
 /**
  *
  * @author MAR
