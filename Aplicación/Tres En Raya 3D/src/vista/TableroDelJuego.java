@@ -157,9 +157,11 @@ protected logica.TresEnRaya3D juego;
         if(numJugadores == 1){
             int[] pos = (new InteligenciaArtificial()).buscarMovimiento(juego.getTablero(),sliderNivel.getValue());
             String posicion = pos[0] + "" +  pos[1] + "" +  pos[2];
+            String i = hashMapTablero.get(posicion).getName(); //Identificador del boton para escoger la imagen.
+            
             if (juego.casillaLibre(pos[0],pos[1],pos[2])) {
                 juego.ingresarValor(pos[0],pos[1],pos[2]);
-                cambiarIcono(hashMapTablero.get(posicion), "jugador2/", "ball_3_default.png", "ball_3_hover.png", "ball_3_pressed.png");
+                cambiarIcono(hashMapTablero.get(posicion), "jugador2/", "ball_" + i + "_default.png", "ball_" + i + "_hover.png", "ball_" + i + "_pressed.png");
                 juego.cambioDeTurno();
             }
         }
@@ -428,6 +430,7 @@ protected logica.TresEnRaya3D juego;
         btn22C.setBorderPainted(false);
         btn22C.setContentAreaFilled(false);
         btn22C.setFocusable(false);
+        btn22C.setName("2"); // NOI18N
         btn22C.setPreferredSize(new java.awt.Dimension(64, 64));
         btn22C.setRolloverEnabled(true);
         jpJuego.add(btn22C, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 470, -1, -1));
@@ -437,6 +440,7 @@ protected logica.TresEnRaya3D juego;
         btn2C.setBorderPainted(false);
         btn2C.setContentAreaFilled(false);
         btn2C.setFocusable(false);
+        btn2C.setName("2"); // NOI18N
         btn2C.setPreferredSize(new java.awt.Dimension(64, 64));
         btn2C.setRolloverEnabled(true);
         jpJuego.add(btn2C, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 470, -1, -1));
@@ -446,6 +450,7 @@ protected logica.TresEnRaya3D juego;
         btn44C.setBorderPainted(false);
         btn44C.setContentAreaFilled(false);
         btn44C.setFocusable(false);
+        btn44C.setName("4"); // NOI18N
         btn44C.setPreferredSize(new java.awt.Dimension(64, 64));
         btn44C.setRolloverEnabled(true);
         jpJuego.add(btn44C, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 580, -1, -1));
@@ -455,6 +460,7 @@ protected logica.TresEnRaya3D juego;
         btn4C.setBorderPainted(false);
         btn4C.setContentAreaFilled(false);
         btn4C.setFocusable(false);
+        btn4C.setName("4"); // NOI18N
         btn4C.setPreferredSize(new java.awt.Dimension(64, 64));
         btn4C.setRolloverEnabled(true);
         jpJuego.add(btn4C, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 580, -1, -1));
@@ -464,6 +470,7 @@ protected logica.TresEnRaya3D juego;
         btn5C.setBorderPainted(false);
         btn5C.setContentAreaFilled(false);
         btn5C.setFocusable(false);
+        btn5C.setName("5"); // NOI18N
         btn5C.setPreferredSize(new java.awt.Dimension(64, 64));
         btn5C.setRolloverEnabled(true);
         jpJuego.add(btn5C, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 620, -1, -1));
@@ -473,6 +480,7 @@ protected logica.TresEnRaya3D juego;
         btn33C.setBorderPainted(false);
         btn33C.setContentAreaFilled(false);
         btn33C.setFocusable(false);
+        btn33C.setName("3"); // NOI18N
         btn33C.setPreferredSize(new java.awt.Dimension(64, 64));
         btn33C.setRolloverEnabled(true);
         jpJuego.add(btn33C, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 520, -1, -1));
@@ -482,6 +490,7 @@ protected logica.TresEnRaya3D juego;
         btn3C.setBorderPainted(false);
         btn3C.setContentAreaFilled(false);
         btn3C.setFocusable(false);
+        btn3C.setName("3"); // NOI18N
         btn3C.setPreferredSize(new java.awt.Dimension(64, 64));
         btn3C.setRolloverEnabled(true);
         jpJuego.add(btn3C, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 520, -1, -1));
@@ -491,6 +500,7 @@ protected logica.TresEnRaya3D juego;
         btn333C.setBorderPainted(false);
         btn333C.setContentAreaFilled(false);
         btn333C.setFocusable(false);
+        btn333C.setName("3"); // NOI18N
         btn333C.setPreferredSize(new java.awt.Dimension(64, 64));
         btn333C.setRolloverEnabled(true);
         jpJuego.add(btn333C, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 520, -1, -1));
@@ -500,6 +510,7 @@ protected logica.TresEnRaya3D juego;
         btn3A.setBorderPainted(false);
         btn3A.setContentAreaFilled(false);
         btn3A.setFocusable(false);
+        btn3A.setName("3"); // NOI18N
         btn3A.setPreferredSize(new java.awt.Dimension(64, 64));
         btn3A.setRolloverEnabled(true);
         jpJuego.add(btn3A, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, -1, -1));
@@ -509,6 +520,7 @@ protected logica.TresEnRaya3D juego;
         btn333A.setBorderPainted(false);
         btn333A.setContentAreaFilled(false);
         btn333A.setFocusable(false);
+        btn333A.setName("3"); // NOI18N
         btn333A.setPreferredSize(new java.awt.Dimension(64, 64));
         btn333A.setRolloverEnabled(true);
         jpJuego.add(btn333A, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 70, -1, -1));
@@ -518,6 +530,7 @@ protected logica.TresEnRaya3D juego;
         btn1B.setBorderPainted(false);
         btn1B.setContentAreaFilled(false);
         btn1B.setFocusable(false);
+        btn1B.setName("1"); // NOI18N
         btn1B.setRolloverEnabled(true);
         jpJuego.add(btn1B, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 220, 64, 64));
 
@@ -526,6 +539,7 @@ protected logica.TresEnRaya3D juego;
         btn22B.setBorderPainted(false);
         btn22B.setContentAreaFilled(false);
         btn22B.setFocusable(false);
+        btn22B.setName("2"); // NOI18N
         btn22B.setPreferredSize(new java.awt.Dimension(64, 64));
         btn22B.setRolloverEnabled(true);
         jpJuego.add(btn22B, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 250, -1, -1));
@@ -535,6 +549,7 @@ protected logica.TresEnRaya3D juego;
         btn2B.setBorderPainted(false);
         btn2B.setContentAreaFilled(false);
         btn2B.setFocusable(false);
+        btn2B.setName("2"); // NOI18N
         btn2B.setPreferredSize(new java.awt.Dimension(64, 64));
         btn2B.setRolloverEnabled(true);
         jpJuego.add(btn2B, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, -1, -1));
@@ -544,6 +559,7 @@ protected logica.TresEnRaya3D juego;
         btn44B.setBorderPainted(false);
         btn44B.setContentAreaFilled(false);
         btn44B.setFocusable(false);
+        btn44B.setName("4"); // NOI18N
         btn44B.setPreferredSize(new java.awt.Dimension(64, 64));
         btn44B.setRolloverEnabled(true);
         jpJuego.add(btn44B, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 340, -1, -1));
@@ -553,6 +569,7 @@ protected logica.TresEnRaya3D juego;
         btn4B.setBorderPainted(false);
         btn4B.setContentAreaFilled(false);
         btn4B.setFocusable(false);
+        btn4B.setName("4"); // NOI18N
         btn4B.setPreferredSize(new java.awt.Dimension(64, 64));
         btn4B.setRolloverEnabled(true);
         jpJuego.add(btn4B, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 340, -1, -1));
@@ -562,6 +579,7 @@ protected logica.TresEnRaya3D juego;
         btn5B.setBorderPainted(false);
         btn5B.setContentAreaFilled(false);
         btn5B.setFocusable(false);
+        btn5B.setName("5"); // NOI18N
         btn5B.setPreferredSize(new java.awt.Dimension(64, 64));
         btn5B.setRolloverEnabled(true);
         jpJuego.add(btn5B, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 380, -1, -1));
@@ -571,6 +589,7 @@ protected logica.TresEnRaya3D juego;
         btn33B.setBorderPainted(false);
         btn33B.setContentAreaFilled(false);
         btn33B.setFocusable(false);
+        btn33B.setName("3"); // NOI18N
         btn33B.setPreferredSize(new java.awt.Dimension(64, 64));
         btn33B.setRolloverEnabled(true);
         jpJuego.add(btn33B, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 300, -1, -1));
@@ -580,6 +599,7 @@ protected logica.TresEnRaya3D juego;
         btn3B.setBorderPainted(false);
         btn3B.setContentAreaFilled(false);
         btn3B.setFocusable(false);
+        btn3B.setName("3"); // NOI18N
         btn3B.setPreferredSize(new java.awt.Dimension(64, 64));
         btn3B.setRolloverEnabled(true);
         jpJuego.add(btn3B, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, -1, -1));
@@ -589,6 +609,7 @@ protected logica.TresEnRaya3D juego;
         btn22A.setBorderPainted(false);
         btn22A.setContentAreaFilled(false);
         btn22A.setFocusable(false);
+        btn22A.setName("2"); // NOI18N
         btn22A.setPreferredSize(new java.awt.Dimension(64, 64));
         btn22A.setRolloverEnabled(true);
         jpJuego.add(btn22A, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 40, -1, -1));
@@ -598,6 +619,7 @@ protected logica.TresEnRaya3D juego;
         btn1A.setBorderPainted(false);
         btn1A.setContentAreaFilled(false);
         btn1A.setFocusable(false);
+        btn1A.setName("1"); // NOI18N
         btn1A.setRolloverEnabled(true);
         jpJuego.add(btn1A, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, 64, 64));
 
@@ -606,6 +628,7 @@ protected logica.TresEnRaya3D juego;
         btn2A.setBorderPainted(false);
         btn2A.setContentAreaFilled(false);
         btn2A.setFocusable(false);
+        btn2A.setName("2"); // NOI18N
         btn2A.setPreferredSize(new java.awt.Dimension(64, 64));
         btn2A.setRolloverEnabled(true);
         jpJuego.add(btn2A, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, -1, -1));
@@ -615,6 +638,7 @@ protected logica.TresEnRaya3D juego;
         btn44A.setBorderPainted(false);
         btn44A.setContentAreaFilled(false);
         btn44A.setFocusable(false);
+        btn44A.setName("4"); // NOI18N
         btn44A.setPreferredSize(new java.awt.Dimension(64, 64));
         btn44A.setRolloverEnabled(true);
         jpJuego.add(btn44A, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, -1, -1));
@@ -624,6 +648,7 @@ protected logica.TresEnRaya3D juego;
         btn4A.setBorderPainted(false);
         btn4A.setContentAreaFilled(false);
         btn4A.setFocusable(false);
+        btn4A.setName("4"); // NOI18N
         btn4A.setPreferredSize(new java.awt.Dimension(64, 64));
         btn4A.setRolloverEnabled(true);
         jpJuego.add(btn4A, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, -1, -1));
@@ -633,6 +658,7 @@ protected logica.TresEnRaya3D juego;
         btn33A.setBorderPainted(false);
         btn33A.setContentAreaFilled(false);
         btn33A.setFocusable(false);
+        btn33A.setName("3"); // NOI18N
         btn33A.setPreferredSize(new java.awt.Dimension(64, 64));
         btn33A.setRolloverEnabled(true);
         jpJuego.add(btn33A, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 80, -1, -1));
@@ -642,6 +668,7 @@ protected logica.TresEnRaya3D juego;
         btn5A.setBorderPainted(false);
         btn5A.setContentAreaFilled(false);
         btn5A.setFocusable(false);
+        btn5A.setName("5"); // NOI18N
         btn5A.setPreferredSize(new java.awt.Dimension(64, 64));
         btn5A.setRolloverEnabled(true);
         jpJuego.add(btn5A, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, -1, -1));
@@ -651,6 +678,7 @@ protected logica.TresEnRaya3D juego;
         btn333B.setBorderPainted(false);
         btn333B.setContentAreaFilled(false);
         btn333B.setFocusable(false);
+        btn333B.setName("3"); // NOI18N
         btn333B.setPreferredSize(new java.awt.Dimension(64, 64));
         btn333B.setRolloverEnabled(true);
         jpJuego.add(btn333B, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 300, -1, -1));
@@ -660,6 +688,7 @@ protected logica.TresEnRaya3D juego;
         btn1C.setBorderPainted(false);
         btn1C.setContentAreaFilled(false);
         btn1C.setFocusable(false);
+        btn1C.setName("1"); // NOI18N
         btn1C.setRolloverEnabled(true);
         jpJuego.add(btn1C, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 440, 64, 64));
 
